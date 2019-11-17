@@ -18,12 +18,13 @@ namespace ClockTimer
             ct = new ClockTimer();
             InitializeComponent();
             ct.TimeChanged += ClockTimer1_TimeChanged;
+            comboBox1.SelectedIndex = 0;
         }
 
         private void ClockTimer1_TimeChanged(object sender, ThresholdReachedEventArgs e)
         {
             label1.Text = e.Time.ToString();
-            comboBox1.SelectedIndex = 0;
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
